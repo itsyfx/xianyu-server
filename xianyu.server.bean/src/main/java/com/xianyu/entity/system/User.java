@@ -23,11 +23,12 @@ public class User extends AbstractEntity {
     @Column(unique = true)
     private String account;
 
+    @Column(name = "phone_number")
     private String phoneNumber;
 
     private String mail;
 
-    @Column(name = "UPDATE_PASSWORD_TIME")
+    @Column(name = "update_password_time")
     private Date updatePasswordTime;
 
 }

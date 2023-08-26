@@ -15,6 +15,7 @@
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <druid.version>1.2.18</druid.version>
     </properties>
 
     <dependencies>
@@ -49,6 +50,18 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- Alibaba Druid -->  
+        <dependency>  
+            <groupId>com.alibaba</groupId>  
+            <!-- <artifactId>druid-spring-boot-3-starter</artifactId> -->
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+        </dependency>  
+        <!-- PostgreSQL JDBC Driver -->
+        <dependency>  
+            <groupId>org.postgresql</groupId>  
+            <artifactId>postgresql</artifactId>  
+        </dependency>  
     </dependencies>
 
     <build>
