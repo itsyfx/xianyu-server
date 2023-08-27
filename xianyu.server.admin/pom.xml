@@ -23,6 +23,11 @@
             <artifactId>xianyu.server.dao</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.xianyu</groupId>
+            <artifactId>xianyu.server.api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!-- 权限 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -68,6 +73,11 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!-- openfeign 远程调用 供javafx客户端使用 -->
+         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
     </dependencies>
 

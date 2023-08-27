@@ -1,11 +1,11 @@
-package com.xianyu.service;
+package com.xianyu.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @FeignClient("xianyu-server")
-public interface LoginService {
-
+public interface UserClient {
+    
     @GetMapping("/login")
     void login();
 
