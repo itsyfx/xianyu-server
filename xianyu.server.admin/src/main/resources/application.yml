@@ -4,6 +4,7 @@ spring:
   cloud:
     nacos:
       config:
+        enabled: true
         server-addr: 124.71.181.12:8848
         file-extension: yaml
   config:
