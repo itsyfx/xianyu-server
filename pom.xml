@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.2</version>
+        <version>3.0.2</version>
         <relativePath/>
     </parent>
 
@@ -20,6 +20,8 @@
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <druid.version>1.2.18</druid.version>
+        <spring.cloud.alibaba.version>2022.0.0.0</spring.cloud.alibaba.version>
     </properties>
 
     <modules>
@@ -29,5 +31,24 @@
         <module>xianyu.server.api</module>
         <module>xianyu.server.admin</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>  
+                <!-- 数据库线程池 druid （目前与sp3整合有问题） -->
+                <groupId>com.alibaba</groupId>  
+                <!-- <artifactId>druid-spring-boot-3-starter</artifactId> -->
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>  
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

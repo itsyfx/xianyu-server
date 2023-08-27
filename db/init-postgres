@@ -1,0 +1,12 @@
+create table XIANYU_SYSTEM_USER (
+    id int primary key ,
+    username varchar(20) ,
+    password varchar(20) ,
+    account varchar(20) ,
+    phone_number varchar(20),
+    mail varchar(20),
+    update_password_time date
+);
+
+insert into XIANYU_SYSTEM_USER(id,username, password, account, phone_number, mail, update_password_time)
+    values (0,'咸鱼','1qaz@WSX','xianyu','17788889999','xianyu@xy.com',now());

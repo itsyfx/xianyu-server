@@ -15,7 +15,6 @@
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <druid.version>1.2.18</druid.version>
     </properties>
 
     <dependencies>
@@ -55,13 +54,21 @@
             <groupId>com.alibaba</groupId>  
             <!-- <artifactId>druid-spring-boot-3-starter</artifactId> -->
             <artifactId>druid-spring-boot-starter</artifactId>
-            <version>${druid.version}</version>
         </dependency>  
         <!-- PostgreSQL JDBC Driver -->
-        <dependency>  
+        <dependency>
             <groupId>org.postgresql</groupId>  
             <artifactId>postgresql</artifactId>  
+        </dependency>
+        <dependency>  
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>  
+        <!-- nacos 注册中心 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
