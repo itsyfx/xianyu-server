@@ -26,3 +26,12 @@ spring:
   config:
     import:
     - optional:nacos:xianyu-server
+  cache:
+    type: redis
+  data:
+    redis:
+      repositories:
+        enabled: false
+      host: 124.71.181.12
+      port: 6379
+      database: 0
