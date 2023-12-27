@@ -1,12 +1,28 @@
 spring:
   application:
     name: xianyu-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/telex
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      # 开启druid监控 暂时 不好用 ，可能是spring boot3 与druid适配有问题，
+      # GitHub有好多人有问题，换成druid-start-3-也不好使
+      stat-view-servlet:
+        enabled: false
+        login-password: xianyu
+        login-username: xianyu
+        url-pattern: /druid/*
   cloud:
     nacos:
+      discovery:
+        server-addr: http://124.71.181.12:8848
       config:
         enabled: true
-        server-addr: 124.71.181.12:8848
+        server-addr: http://124.71.181.12:8848
         file-extension: yaml
   config:
     import:
-    - optional:nacos:xianyu-server.yaml
+    - optional:nacos:xianyu-server
